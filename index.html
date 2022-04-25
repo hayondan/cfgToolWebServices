@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Upgrades Builds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container1">
+        <h1>CFG WebServices </h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="version" name="version" value="{{
+          request.form.version }}">
+         <input type="vernum" placeholder="verNum" name="verNum" value="{{
+          request.form.vernum }}">
+          <input type="build" placeholder="build" name="build" value="{{
+          request.form.build }}">
+          <input type="appBuild" placeholder="appBuild" name="appBuild" value="{{
+          request.form.appBuild }}">
+        <input class="btn btn-default" type="submit" value="Update">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
